@@ -1,0 +1,55 @@
+block popups
+  .popup#calback(style="display: none;")
+    .like-h2 Обратный звонок
+    form(data-abide novalidate)
+      label
+        input(type='text' required placeholder="Ваше имя *")
+      label
+        input(type='tel' required placeholder="Ваш телефон *")
+      label
+        input(type='text' placeholder="Время удобное для звонка")
+      .bottom
+        label.checkbox
+          input(type="checkbox" name='personal')
+          .checkbox__text Я согласен на обработку персональных данных.
+            a(href='/privacy.html') Подробнее...
+        a(href='#').popup_button.golden Отправить
+  .popup#order(style="display: none;")
+    .like-h2 Заказ Полотенце для кофе
+    form(data-abide novalidate)
+      label
+        input(type='text' required placeholder="Ваше имя ")
+      label
+        input(type='tel' required placeholder="Телефон ")
+      label
+        input(type='email' required placeholder="Email ")
+      label
+        input.city(type='text' required placeholder="Ваш город")
+      label
+        select(required)
+          option(value="") Выберите тип организации
+          -var option = ['Клининговая компания','Ресторан/бар/клуб/спортклуб/финтесцентр/стадион','Гостиница/отель','Кинотеатр/музей/театр','Производство','Оптовик','Офис/бизнес-центр/офисный центр/административное здание','Частное лицо']
+          -for(var i=0; i < option.length; i++)
+            option(value=i )= option[i]
+      label
+        textarea(placeholder="Ваш вопрос")
+      span Отправить вопрос в офис:
+      label.radio
+        input(type="radio" name='office')
+        .radio__text Москва
+      label.radio
+        input(type="radio" name='office')
+        .radio__text Санкт-Петербург
+      label.radio
+        input(type="radio" name='office')
+        .radio__text Сочи
+      label.file
+        .title Прикрепить карточку с реквизитами
+        input(type="file" name="uploaded-file" id="uploaded-file" accept="image/*,text/richtext,application/msword,application/rtf,text/plain")
+        a(href="javascript:;").clear
+      .agree Нажимая кнопку “Отправить”, я соглашаюсь с
+              a(href='/privacy.html') условиями хранения
+              | моих данных
+      .captcha
+        .g-recaptcha(data-sitekey="6LckOEUUAAAAACH9ittmiK8ImkckarsN9zt0yeTT")
+      a(href='#').free-test_button.red Заказать

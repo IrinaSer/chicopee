@@ -1,0 +1,100 @@
+block catalog
+  .catalog
+    .inner
+      .title-block
+        .like-h2 Каталог
+        a(href="#").get-price Скачать прайс-лист
+      ul.catalog_tabs.tabs(data-tabs id="example-tabs")
+        -var tabsTitle = ['Общественное питание','Строительство','Промышленность','Здравоохранение','авто','Авиация']
+        -for(var i=0; i < tabsTitle.length; i++)
+          li(class=(i==0) ? 'tabs-title is-active':'tabs-title')
+            -var x = i + 1
+            a(href='#panel' + x).tabs-title_inner
+              -var j = i + 2
+                .img-wrap
+                  img(src='assets/img/img-' + j + '.png')
+                p.title=tabsTitle[i]
+
+      .tabs-content(data-tabs-content="example-tabs")
+        .tabs-panel.is-active(id="panel1")
+          .catalog-list
+            -for(var i=0; i < 3; i++)
+              -for(var j=0; j < 4; j++)
+                -var x = j + 2
+                .catalog-list-item
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                    img(src='img/img-'+x+'.png')
+                  .info-wrap
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                    .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod  laoree
+                    .price от 81 000 ₽
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще
+        .tabs-panel(id="panel2")
+          .catalog-list
+            -for(var i=0; i < 2; i++)
+              -for(var j=0; j < 4; j++)
+                -var x = j + 2
+                .catalog-list-item
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                    img(src='img/img-' + x + '.png')
+                  .info-wrap
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                    .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod  laoree
+                    .price от 81 000 ₽
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще
+        .tabs-panel(id="panel3")
+          .catalog-list
+            -for(var j=0; j < 4; j++)
+              -var x = j + 2
+              .catalog-list-item
+                a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                  img(src='img/img-' + x + '.png')
+                .info-wrap
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                  .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoree
+                  .price от 81 000 ₽
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще
+        .tabs-panel(id="panel4")
+          .catalog-list
+            -for(var i=0; i < 2; i++)
+              -for(var j=0; j < 4; j++)
+                -var x = j + 2
+                .catalog-list-item
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                    img(src='img/img-' + x + '.png')
+                  .info-wrap
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                    .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoree
+                    .price от 81 000 ₽
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще
+        .tabs-panel(id="panel5")
+          .catalog-list
+            -for(var i=0; i < 2; i++)
+              -for(var j=0; j < 4; j++)
+                -var x = j + 2
+                .catalog-list-item
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                    img(src='img/img-' + x + '.png')
+                  .info-wrap
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                    .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoree
+                    .price от 81 000 ₽
+                    a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще
+        .tabs-panel(id="panel6")
+          .catalog-list
+            -for(var j=0; j < 4; j++)
+              -var x = j + 2
+              .catalog-list-item
+                a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).img-wrap
+                  img(src='img/img-' + x + '.png')
+                .info-wrap
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).name Полотенце для кофе
+                  .info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoree
+                  .price от 81 000 ₽
+                  a(data-product data-type="ajax" data-src="/product_ajax.html" href="javascript:;" ).order Заказать
+          a(href="javascript:;").show-all Показать еще

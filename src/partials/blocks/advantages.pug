@@ -1,0 +1,11 @@
+block advantages
+  .advantages
+    .inner
+      -var img = ['assets/img/base64/pocket.svg','assets/img/base64/like.svg','assets/img/base64/support.svg']
+      -for(var i=0; i < img.length; i++)
+        .advantages_item
+          .img-wrap
+            img(src=img[i])
+          .info-wrap
+            .title Преимущество
+            .txt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod

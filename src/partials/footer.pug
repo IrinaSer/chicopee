@@ -1,0 +1,28 @@
+block footer
+  .site-footer
+    .site-footer_left
+      .site-footer_form#contact-us(data-magellan-target="contact-us")
+        .title Связаться с нами
+        form(data-abide novalidate action="#")
+          label
+            input(type='text' required placeholder="Ваше имя ")
+          label
+            input(type='email' required placeholder="Email ")
+          label
+            textarea(placeholder="Ваш комментарий")
+          .bottom
+            .agree Нажимая кнопку “Отправить”, я соглашаюсь с
+              a(href='/privacy.html') условиями хранения
+              | моих данных
+            a(href='#').send.golden Отправить
+      .site-footer_contacts#contacts(data-magellan-target="contacts")
+        .addr
+          .title мы находимся:
+          .info Москва, ул. Тверская, д. 15
+        .metro Тверская
+      a(href='tel:+74953333333').site-footer_phone +7 (495) 333-33-33
+    .site-footer_right
+      #map
+    .site-footer_copyright
+      .inner
+        .txt © Компания «CHICOPEE» — один из крупнейших операторов бумажной санитарно-гигиенической продукции в России, 2018 год

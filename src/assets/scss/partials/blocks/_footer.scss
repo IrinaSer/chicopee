@@ -1,0 +1,226 @@
+.site-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  background-color: #f8f8f8;
+  @include breakpoint(860 down) {
+    display: block;
+  }
+  &_left,
+  &_right {
+    width: 50%;
+    @include breakpoint(860 down) {
+      width: 100%;
+    }
+  }
+
+  &_left {
+    max-width: 692px;
+    margin-left: auto;
+    padding: 75px 5% 130px 50px;
+    @include breakpoint(1200 down) {
+      padding: 52px 20px 112px 20px;
+    }
+    @include breakpoint(860 down) {
+      padding: 52px 30px 40px 30px;
+      max-width: 100%;
+    }
+    @include breakpoint(440 down) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .title {
+      color: $tundora;
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      @include breakpoint(860 down) {
+        margin-bottom: 42px;
+      }
+      @include breakpoint(440 down) {
+        font-size: 24px;
+      }
+    }
+    input:not([type='checkbox']) {
+      margin-bottom: 25px;
+    }
+    textarea {
+      margin-bottom: 18px;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      @include breakpoint(1200 down) {
+        display: block;
+        margin-top: 23px;
+      }
+    }
+    .send {
+      @include button;
+      width: 200px;
+      flex: 0 0 200px;
+      height: 50px;
+      border-radius: 25px;
+      @include breakpoint(1200 down) {
+        margin-top: 22px;
+      }
+      @include breakpoint(860 down) {
+        width: 300px;
+        height: 60px;
+        border-radius: 30px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+      }
+    }
+  }
+  #map {
+    height: 725px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .ymaps-2-1-68-map {
+      max-width: 100%;
+      height: 100%;
+    }
+    @include breakpoint(860 down) {
+      height: 270px;
+      overflow: hidden;
+    }
+  }
+  &_contacts {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 67px;
+    margin-bottom: 35px;
+    @include breakpoint(1200 down) {
+      margin-top: 44px;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(860 down) {
+      margin-top: 60px;
+      margin-bottom: 31px;
+    }
+    @include breakpoint(440 down) {
+      display: block;
+    }
+    .addr {
+      font-size: 16px;
+      font-weight: 600;
+      @include breakpoint(860 down) {
+        font-size: 20px;
+      }
+      @include breakpoint(440 down) {
+        margin-bottom: 20px;
+      }
+      .title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #acacac;
+        margin-bottom: 5px;
+        @include breakpoint(860 down) {
+          font-size: 20px;
+          text-transform: none;
+        }
+      }
+      .info {
+        color: #5c5c5c;
+      }
+    }
+    .metro {
+      margin-left: 19%;
+      color: #5c5c5c;
+      font-size: 16px;
+      font-weight: 200;
+      display: inline-flex;
+      align-items: center;
+      @include breakpoint(860 down) {
+        font-size: 20px;
+        margin-left: 12%;
+      }
+      @include breakpoint(440 down) {
+        margin-left: 0;
+      }
+      &:before {
+        display: block;
+        content: '';
+        width: 30px;
+        height: 23px;
+        background-image: svg-load('metro.svg', fill=#99af22);
+        background-repeat: no-repeat;
+        margin-right: 10px;
+      }
+    }
+  }
+  &_phone {
+    color: #5c5c5c;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.25px;
+    @include breakpoint(440 down) {
+      font-size: 24px;
+    }
+  }
+  &_copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    @include breakpoint(860 down) {
+      position: relative;
+      bottom: auto;
+      left: auto;
+    }
+    &:before {
+      content: '';
+      display: block;
+      height: 107px;
+      width: 100%;
+      background-image: svg-load('line.svg', fill=$alizarin-crimson);
+      background-repeat: no-repeat;
+      background-size: auto 107px;
+      background-position: bottom right;
+      margin-bottom: 22px;
+      @include breakpoint(860 down) {
+        height: 80px;
+        background-size: auto 80px;
+        position: absolute;
+        bottom: calc(100% + 20px);
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 23px;
+      width: 50%;
+      background-color: $alizarin-crimson;
+      position: absolute;
+      top: 84px;
+      left: 0;
+      @include breakpoint(860 down) {
+        display: none;
+      }
+    }
+    .txt {
+      padding-left: 8px;
+      width: 430px;
+      color: $nobel;
+      font-size: 12px;
+      font-weight: 200;
+      margin-bottom: 20px;
+      max-width: 100%;
+      @include breakpoint(860 down) {
+        width: 100%;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

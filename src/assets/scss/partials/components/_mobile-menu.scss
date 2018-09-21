@@ -1,0 +1,163 @@
+.mobile-btn {
+  display: none;
+  @include breakpoint(1400 down) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-image: svg-load('menu.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    &.open {
+      background-image: svg-load('close.svg');
+    }
+  }
+}
+.layout {
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  padding-top: 100px;
+  @include breakpoint(860 down) {
+    padding-top: 90px;
+  }
+}
+.layout.open {
+  -webkit-transform: translateX(-380px);
+  -ms-transform: translateX(-380px);
+  transform: translateX(-380px);
+  @include breakpoint(860 down) {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+#m-menu {
+  position: fixed;
+  display: block;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 380px;
+  -webkit-transform: translateX(380px);
+  -ms-transform: translateX(380px);
+  transform: translateX(380px);
+  background: #4b4b4b;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  padding: 20px 50px 50px 50px;
+  &.open {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  @include breakpoint(860 down) {
+    padding: 50px 30px 90px 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    z-index: 99;
+    &.open {
+      display: flex;
+      height: calc(100vh - 90px);
+    }
+  }
+}
+
+.mobile {
+  &_top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(860 down) {
+      display: block;
+      height: auto;
+    }
+  }
+  &_menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      a {
+        color: $cur-white;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.2;
+        @include breakpoint(small down) {
+          font-size: 24px;
+        }
+        @include breakpoint(440 down) {
+          font-size: 18px;
+        }
+      }
+      li {
+        border-bottom: 1px solid #969696;
+        padding: 20px 0;
+        @include breakpoint(small down) {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+  &_contacts {
+    margin-top: 20px;
+    &_phone {
+      color: $cur-white;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: block;
+      @include breakpoint(small down) {
+        font-size: 32px;
+      }
+      @include breakpoint(440 down) {
+        font-size: 28px;
+      }
+    }
+    &_calback {
+      color: $sunflower;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+      margin-top: 5px;
+      @include breakpoint(small down) {
+        font-size: 24px;
+      }
+    }
+  }
+  &_btn {
+    @include button;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 0 0 60px;
+    margin-top: 20px;
+    @include breakpoint(861 up) {
+      display: none;
+    }
+    @include breakpoint(440 down) {
+      font-size: 18px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

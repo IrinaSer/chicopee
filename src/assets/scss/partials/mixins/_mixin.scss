@@ -1,0 +1,29 @@
+@mixin centered-block {
+  /*padding-left: calc((100% - 1200px) / 2);
+  padding-right: calc((100% - 1200px) / 2);*/
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 25px;
+  @include breakpoint(1400 down) {
+    max-width: 100%;
+  }
+  @include breakpoint(1240 down) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color:$cur-white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.05px;
+  text-decoration: none;
+  max-width: 100%;
+  @include breakpoint(860 down) {
+    font-size: 24px;
+  }
+}

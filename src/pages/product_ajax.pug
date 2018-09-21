@@ -1,0 +1,63 @@
+#product-detail
+  .product-detail_wrap
+    .product-detail
+      .product-detail_top
+        .product-detail_left
+          .product-detail_slider
+            .slider-for
+              -for(var i=0; i < 5; i++)
+                -var x = i + 2
+                div
+                  .img-wrap
+                    img(src='img/img-' + x + '.png')
+            .slider-nav
+              -for(var j=0; j < 5; j++)
+                -var y = j + 2
+                div
+                  .img-wrap
+                    img(src='img/img-' + y + '.png')
+          .product-detail_download
+            a(href="#").get-price Скачать прайс-лист
+            a(href="#").get-booklet Скачать буклет
+        .product-detail_right
+          .title-block
+            .name Полотенце для кофе
+            .icons
+              img(src='assets/img/img-3.png')
+              img(src='assets/img/img-4.png')
+              img(src='assets/img/img-5.png')
+          .descr Soft Plus превосходно впитывает грязь и, одновременно с этим, является очень мягкой, что позволяет производить уборку эффективно.
+          .list
+            .list-block
+              .title Проблемы
+              ul
+                li Дешевые салфетки низкого качества могут привести       к царапинам на поверхности.
+                li Салфетки низкого качества, а также бумага часто оставляют ворс или кусочки ткани (бумаги) на поверхности, которые распространяются дальше.
+                li На промышленном предприятии много мест, которые трудно поддаются уборке и, при этом, там есть вода, масло и краска, что, в свою очередь, может вызвать высокое потребление салфеток низкого качества, приводя к высоким затратам.
+            .list-block
+              .title Решение
+              ul
+                li Veraclean Soft Plus является очень мягкой, что делает ее идеальной для уборки чувствительных поверхностей без их царапания.
+                li У салфеток Soft Plus отсутствует ворс, что, в свою очередь, не приведет к тому, что он останется на поверхности; это делает ваш производственный процесс более безопасным.
+                li  Уникальная открытая структура обеспечивает отличный захват промышленной грязи, такой как красящий порошок или пыль. Soft Plus отлично впитывает целый ряд жидкостей, таких как вода, масло или типографская краска, и поэтому она идеально подходит для легкой промышленности.
+          .table-txt Все салфетки Veraclean Soft Plus не содержат силикона, что позволит избежать дефектов на поверхности.
+          .params-table
+            -var thead = ["Артикул","Цвет","Размер салфетки","Салфеток в упаковке","Упаковок в кейсе","Тип продукта"]
+            -var value = ["74119","","61x53 см","50","8","N сложение"]
+            table
+              thead
+                tr
+                -for(var j=0; j < thead.length; j++)
+                  th=thead[j]
+              tbody
+                -for(var i=0; i < 3; i++)
+                  tr
+                    -for(var j=0; j < thead.length; j++)
+                      td(data-label=thead[j])=value[j]
+                        if (j==1)
+                          -var y = i + 1
+                          img(src='img/color-' + y + '.png')
+      .product-detail_bottom
+        .price Цена:
+          span.val  от 81 000 ₽
+        a(href="javascript:;" data-fancybox data-src="#order" ).order-btn.red Заказать

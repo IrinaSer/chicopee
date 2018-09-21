@@ -1,0 +1,18 @@
+block header
+  header.site-header
+    .inner
+      a(href="/").site-header_logo
+         img(src="assets/img/logo.png")
+      nav.site-header_menu
+        -var menuTitle = ["Каталог","преимущества","связаться с нами","контакты"]
+        -var menuId = ["#catalog","#advantages","#contact-us","#contacts"]
+          ul(data-magellan)
+            -for(var i=0; i < menuTitle.length; i++)
+              li
+                a(href=menuId[i])= menuTitle[i]
+            li
+              a(href='#free-test').site-header_btn.golden Бесплатный тест
+      .site-header_contacts
+        a(href='tel:+74953333333').site-header_contacts_phone +7 (495) 333-33-33
+        a(data-fancybox data-src="#calback" href="javascript:;").site-header_contacts_calback Обратный звонок
+      .mobile-btn

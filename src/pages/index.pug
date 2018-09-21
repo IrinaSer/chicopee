@@ -1,0 +1,12 @@
+extends ../layout/base.pug
+block prepend head
+  -var title = 'Главная';
+block main
+  section#slider
+    include ../partials/blocks/top-slider
+  section#catalog(data-magellan-target="catalog")
+    include ../partials/blocks/catalog
+  section#free-test(data-magellan-target="free-test")
+    include ../partials/blocks/free-test
+  section#advantages(data-magellan-target="advantages")
+    include ../partials/blocks/advantages

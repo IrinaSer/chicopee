@@ -1,0 +1,13 @@
+block mobile-menu
+  .mobile_top
+    nav.mobile_menu
+        -var menuTitle = ["Каталог","преимущества","связаться с нами","контакты"]
+        -var menuId = ["#catalog","#advantages","#contact-us","#contacts"]
+        ul(data-magellan)
+          -for(var i=0; i < menuTitle.length; i++)
+            li
+              a(href=menuId[i] data-close)= menuTitle[i]
+    .mobile_contacts
+      a(href='tel:+74953333333').mobile_contacts_phone +7 (495) 333-33-33
+      a(data-fancybox data-src="#calback" href="javascript:;").mobile_contacts_calback Обратный звонок
+  a(href='#free-test' data-close).mobile_btn.golden Бесплатный тест

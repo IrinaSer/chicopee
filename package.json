@@ -1,0 +1,58 @@
+{
+  "name": "frontend-gulp-4.0",
+  "version": "1.0.0",
+  "description": "automate build frontend",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-register": "*",
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.24.6",
+    "bs-html-injector": "^3.0.3",
+    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp-awspublish": "^3.3.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-html-src": "^1.0.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-image": "^4.3.0",
+    "gulp-inline-css": "^3.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-clone": "^2.0.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "postcss-svgo": "^4.0.0",
+    "postcss-flexbugs-fixes": "^*",
+    "gulp-postcss": "^8.0.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-inline-svg": "^3.1.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-zip": "^4.2.0",
+    "merge-stream": "^1.0.1",
+    "rimraf": "^2.6.2",
+    "foundation-sites": "^6.5.0-rc.2"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "author": "Silmarwen",
+  "license": "ISC",
+  "dependencies": {
+    "sass-lint": "^1.12.1"
+  }
+}

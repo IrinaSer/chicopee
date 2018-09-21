@@ -1,0 +1,238 @@
+form {
+  margin-top: 20px;
+}
+
+input:not([type='checkbox']),
+input:not([type='file']) {
+  border: 1px solid transparent;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: $tundora;
+  padding: 0 40px 0 20px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  &:focus,
+  &:active {
+    border: 1px solid $sunflower;
+  }
+  &.valid {
+    background-image: svg-load('success.svg');
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+  }
+}
+
+textarea {
+  border: 1px solid transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  resize: none;
+  height: 80px;
+  padding: 15px 20px;
+  outline: none;
+  color: #565656;
+  font-size: 18px;
+  
+  &:focus,
+  &:active {
+    border: 1px solid $sunflower;
+  }
+}
+
+input:not([type='checkbox']),
+input:not([type='file']) {
+  &::placeholder {
+    color: $nobel;
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    color: $nobel;
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $nobel;
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    color: $nobel;
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    color: $nobel;
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+  }
+}
+
+.checkbox {
+  a {
+    color: $nobel;
+    padding-left: 5px;
+  }
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+  }
+  &__text {
+    position: relative;
+    padding: 0 0 0 25px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      box-shadow: inset 0 1px 4px rgba(23, 26, 30, 0.19);
+      border-radius: 2px;
+      background-color: #e9ebed;
+      transition: .2s;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 4px;
+      width: 7px;
+      height: 5px;
+      border-left: 1px solid $alizarin-crimson;
+      border-bottom: 1px solid $alizarin-crimson;
+      transform: rotate(-45deg);
+      transition: .2s;
+      display: none;
+    }
+  }
+}
+
+.checkbox input:checked + .checkbox__text:after {
+  display: block;
+}
+
+//
+.radio {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+  }
+  &__text {
+    position: relative;
+    padding: 0 0 0 25px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      box-shadow: inset 0 1px 4px rgba(23, 26, 30, 0.19);
+      border-radius: 2px;
+      background-color: #e9ebed;
+      transition: .2s;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 4px;
+      width: 7px;
+      height: 5px;
+      border-left: 1px solid $alizarin-crimson;
+      border-bottom: 1px solid $alizarin-crimson;
+      transform: rotate(-45deg);
+      transition: .2s;
+      display: none;
+    }
+  }
+}
+
+.radio input:checked + .radio__text:after {
+  display: block;
+}
+
+//
+.popup {
+  &.fancybox-content {
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+  }
+
+  .like-h2 {
+    &:after {
+      display: none;
+    }
+  }
+  &_button {
+    @include button;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    margin: 20px auto;
+    width: 200px;
+    height: 40px;
+  }
+}
+
+ymaps input:not([type='checkbox'],[type='file']) {
+  height: auto;
+  border: none;
+  margin-bottom: 0;
+}
+
+#uploaded-file {
+  margin: 0;
+  &:active,
+  &:focus {
+    border: none;
+  }
+}
+.file {
+  position: relative;
+ margin-top: 15px;
+  .clear {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: svg-load('close.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &.avail {
+      display: block;
+    }
+  }
+}
+.captcha {
+  margin: 20px 0;
+  @include breakpoint(440 down) {
+    transform:scale(0.87);
+    -webkit-transform:scale(0.87);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+  }
+}

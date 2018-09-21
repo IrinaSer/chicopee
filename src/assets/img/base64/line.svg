@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 105" enable-background="new 0 0 1560 105">
+    <filter filterUnits="userSpaceOnUse" height="164" id="a" width="1616.9" x="-91" y="3691">
+        <feOffset dx="10.9" dy="13" in="SourceGraphic" result="FeOffset1023Out"/>
+        <feGaussianBlur in="FeOffset1023Out" result="FeGaussianBlur1024Out" stdDeviation="5.2 5.2"/>
+    </filter>
+    <path d="M-68 3714h1560v105H-68v-105z" />
+    <path d="M-68 3797h1226s124.2-.4 208-27 126-56 126-56v26s-50.3 32-122.5 51.5-137.2 27.5-209.5 27.5H-68v-22z"/>
+    <path d="M-68 3797h1226s124.2-.4 208-27 126-56 126-56v26s-50.3 32-122.5 51.5-137.2 27.5-209.5 27.5H-68v-22z"
+          opacity=".06" filter="url(#a)" transform="translate(68 -3714)"/>
+    <path d="M0 83h1226s124.2-.4 208-27 126-56 126-56v26s-50.3 32-122.5 51.5S1300.3 105 1228 105H0V83z" />
+</svg>

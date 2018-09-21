@@ -1,0 +1,353 @@
+.catalog {
+  padding-bottom: 80px;
+  background-color: $cur-white;
+  box-shadow: 11px 13px 13px rgba(0, 0, 0, 0.06);
+  border-radius: 0 0 380px/107px 0;
+  position: relative;
+  background-image: linear-gradient(to top, #f8f8f8 0, #f8f8f8 22px, #ffffff 0);
+  overflow: hidden;
+  @include breakpoint(860 down) {
+    padding-bottom: 60px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 105px;
+    position: absolute;
+    bottom: 0;
+    background-image: svg-load('line.svg', fill= $alabaster-light);
+    background-repeat: no-repeat;
+    background-size: auto 105px;
+    background-position: bottom right;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 226px;
+    @include breakpoint(1200 down) {
+      display: none;
+    }
+  }
+  .inner {
+    padding-left: 5px;
+    padding-right: 5px;
+    @include breakpoint(860 down) {
+      padding: 14px 0 0;
+    }
+    .like-h2 {
+      padding-left: 0;
+      @include breakpoint(860 down) {
+        padding-left: 30px;
+      }
+    }
+  }
+  .get-price {
+    margin-top: 8px;
+    color: $tundora;
+    font-size: 14px;
+    font-weight: 300;
+    &:before {
+      width: 20px;
+      height: 26px;
+      background-image: svg-load('file.svg', fill=$alizarin-crimson);
+      margin-right: 13px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      @include breakpoint(860 down) {
+        width: 26px;
+        height: 34px;
+        margin-right: 20px;
+      }
+    }
+    @include breakpoint(large up) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @include breakpoint(860 down) {
+      padding: 17px 0;
+      font-size: 24px;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 24px 0 0 0;
+      background-color: $gallery;
+      padding-left: 30px;
+    }
+    @include breakpoint(440 down) {
+      font-size: 18px;
+    }
+  }
+  &_tabs {
+    border: none;
+    border-bottom: 1px solid $gallery;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint(1200 down) {
+      border-bottom: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include breakpoint(medium down) {
+      flex-wrap: wrap;
+    }
+    .tabs-title {
+      width: calc(100% / 6);
+      @include breakpoint(1023 down) {
+        width: calc(100% / 3);
+        margin-bottom: 20px;
+      }
+      @include breakpoint(860 down) {
+        width: 50%;
+        flex: 1 0 50%;
+      }
+      &:first-of-type > a {
+        &:before {
+          display: none;
+        }
+      }
+      > a {
+        border: 1px solid transparent;
+        border-top: 11px solid transparent;
+        position: relative;
+        @include breakpoint(860 down) {
+          border-left: none;
+          border-right: none;
+        }
+        &:before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 80px;
+          background-color: $gallery;
+          position: absolute;
+          left: -2px;
+          top: calc(50% - 40px);
+          @include breakpoint(1200 down) {
+            display: none;
+          }
+        }
+
+      }
+      > a:focus, > a[aria-selected='true'], > a:hover {
+        background: transparent;
+        border-top: 11px solid #e30613;
+        border-right: 1px solid $gallery;
+        border-left: 1px solid $gallery;
+        @include breakpoint(1200 down) {
+          border-right: none;
+          border-left: none;
+        }
+        &:before {
+          display: none;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 3px;
+          background-color: #fff;
+          position: absolute;
+          bottom: -2px;
+        }
+      }
+      &_inner {
+        height: 100%;
+        padding: 0;
+        .img-wrap {
+          display: flex;
+          width: 100%;
+          height: 125px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include breakpoint(860 down) {
+            height: 108px;
+          }
+        }
+        .title {
+          margin: 0;
+          text-align: center;
+          color: $nobel;
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          @include breakpoint(1200 down) {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+          @include breakpoint(860 down) {
+            font-size: 20px;
+          }
+          @include breakpoint(440 down) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .tabs-content {
+    border: none;
+  }
+  .tabs-panel {
+    padding: 50px 0 0 20px;
+    @include breakpoint(1200 down) {
+      padding-top: 31px;
+    }
+    @include breakpoint(860 down) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include breakpoint(440 down) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include breakpoint(1200 down) {
+      justify-content: flex-start;
+    }
+    &.open {
+      .catalog-list-item {
+        &:nth-child(n+7){
+          display: flex;
+        }
+      }
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: calc(25% - 20px);
+      border: 1px solid $seashell;
+      padding: 10px 30px 30px;
+      margin-bottom: 25px;
+      margin-right: 10px;
+
+      @include breakpoint(1200 down) {
+        width: calc(33.33% - 11px);
+        margin-right: 10px;
+      }
+      @include breakpoint(860 down) {
+        width: 100%;
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        padding: 10px 20px 25px 0;
+        margin-bottom: 15px;
+        &:nth-child(n+7){
+          display: none;
+        }
+      }
+
+      @include breakpoint(440 down) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        @include breakpoint(860 down) {
+          width: 50%;
+        }
+        @include breakpoint(440 down) {
+          width: 100%;
+        }
+      }
+      .info-wrap {
+        text-align: center;
+        max-width: 100%;
+        @include breakpoint(860 down) {
+          text-align: left;
+          width: 50%;
+          padding-left: 10px;
+        }
+        @include breakpoint(440 down) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .name {
+        display: block;
+        color: $dove-gray;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: underline;
+        margin-top: 20px;
+        margin-bottom: 7px;
+        @include breakpoint(860 down) {
+          font-size: 24px;
+          margin-bottom: 15px;
+          line-height: 1.2;
+        }
+      }
+      .info {
+        color: $cust-gray;
+        font-size: 14px;
+        font-weight: 200;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        @include breakpoint(860 down) {
+          font-size: 18px;
+          text-align: left;
+          margin-bottom: 22px;
+        }
+        @include breakpoint(440 down) {
+          text-align: center;
+        }
+      }
+      .price {
+        color: $tundora;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 28px;
+      }
+      .order {
+        @include button;
+        width: 260px;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid $cust-red;
+        color: $cust-red;
+        @include breakpoint(large up) {
+          &:hover {
+            background-color: $cust-red;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .show-all {
+    @include button;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #f5f3f3;
+    color: $tundora;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 20px auto;
+    text-transform: none;
+    display: none;
+    &.show {
+      @include breakpoint(860px down) {
+        display: flex;
+      }
+    }
+  }
+}

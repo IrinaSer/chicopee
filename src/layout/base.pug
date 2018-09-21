@@ -1,0 +1,21 @@
+include ../partials/blocks/breadcrumbs
+doctype
+html(lang='ru')
+  head
+    block head
+      include ../partials/head
+  body
+    #m-menu
+      include ../partials/mobile-menu
+    block header
+      include ../partials/header
+    .layout
+      block content
+        main
+          block main
+      block footer
+        include ../partials/footer
+
+      //include ../partials/mobile-menu
+    include ../partials/blocks/popups
+    include ../partials/scripts

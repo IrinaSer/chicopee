@@ -1,0 +1,138 @@
+.site-header {
+  background-color: $cur-white;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include breakpoint(861 up) {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+    &.open {
+      -webkit-transform: translateX(-380px);
+      -ms-transform: translateX(-380px);
+      transform: translateX(-380px);
+      transition: -webkit-transform .3s ease;
+      transition: transform .3s ease;
+      transition: transform .3s ease, -webkit-transform .3s ease;
+    }
+  }
+
+  .inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 22px 0 20px 27px;
+    @include breakpoint(1400 down) {
+      padding-right: 20px;
+      height: 90px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include breakpoint(860 down) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include breakpoint(440 down) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &_logo {
+    flex: 0 0 255px;
+    margin-top: -8px;
+    @include breakpoint(860 down) {
+      flex: 1 0 170px;
+    }
+  }
+  &_menu {
+    flex: 1 0 auto;
+    ul {
+      display: inline-flex;
+      align-items: center;
+      list-style: none;
+      padding-left: 26px;
+      padding-right: 45px;
+      width: 100%;
+      margin: 0;
+    }
+    li {
+      margin-right: 24px;
+      @include breakpoint(1400 down) {
+        display: none;
+      }
+      &:last-of-type {
+        margin-right: 0;
+        margin-left: auto;
+        @include breakpoint(1400 down) {
+          display: block;
+        }
+      }
+    }
+    a {
+      color: $tundora;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+      @include breakpoint(large up) {
+        &:hover {
+          border-bottom: 3px solid $alizarin-crimson;
+        }
+      }
+      &.site-header_btn {
+        @include button;
+        border-bottom: none!important;
+        width: 260px;
+        height: 50px;
+        border-radius: 25px;
+        &:hover {
+          border-bottom: none!important;
+        }
+        @include breakpoint(860 down) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_contacts {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    &_phone {
+      display: block;
+      color: $tundora;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @include breakpoint(large up) {
+        &:hover {
+          color: $silver;
+        }
+      }
+    }
+    &_calback {
+      color: $silver;
+      font-size: 14px;
+      font-weight: 200;
+      @include breakpoint(large up) {
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

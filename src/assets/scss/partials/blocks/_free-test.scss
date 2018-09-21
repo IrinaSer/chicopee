@@ -1,0 +1,209 @@
+.free-test {
+  padding-top: 184px;
+  background-image: svg-load('grey-bg.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-top: -100px;
+  @include breakpoint(1200 down) {
+    padding-top: 143px;
+  }
+  @include breakpoint(860 down) {
+    border-radius: 0 0 233px/54px 0;
+  }
+
+  .inner {
+    display: flex;
+    flex-wrap: nowrap;
+    @include breakpoint(1200 down) {
+      flex-wrap: wrap;
+      padding-left: 85px;
+      padding-right: 85px;
+    }
+    @include breakpoint(860 down) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include breakpoint(440 down) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &_left {
+    width: 36%;
+    padding-left: 30px;
+    @include breakpoint(1200 down) {
+      width: 100%;
+      margin-bottom: 38px;
+    }
+    @include breakpoint(860 down) {
+      padding-left: 0;
+    }
+    .title {
+      color: $tundora;
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      padding-right: 20px;
+      @include breakpoint(1200 down) {
+        margin-bottom: 17px;
+      }
+      @include breakpoint(440 down) {
+        font-size: 24px;
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    .bottom-txt {
+      display: flex;
+      line-height: 1.2;
+      &:after {
+        display: block;
+        content: '';
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        background-image: svg-load('round-arrow.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        margin-left: 17%;
+        margin-right: 95px;
+        @include breakpoint(1200 down) {
+          display: none;
+        }
+      }
+      .txt {
+        @include breakpoint(1200 down) {
+          display: flex;
+        }
+        @include breakpoint(860 down) {
+          display: block;
+          width: 60%;
+        }
+        @include breakpoint(440 down) {
+          width: 100%;
+        }
+      }
+
+    }
+    p {
+      color: $tundora;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin: 0;
+      @include breakpoint(860 down) {
+        font-size: 20px;
+      }
+      @include breakpoint(440 down) {
+        font-size: 15px;
+      }
+      &.write-us {
+        display: block;
+        color: $alizarin-crimson;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        @include breakpoint(1200 down) {
+          padding-left: 5px;
+        }
+        @include breakpoint(860 down) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &_right {
+    width: 60%;
+    @include breakpoint(1200 down) {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include breakpoint(860 down) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 63px;
+    margin-top: 0;
+    @include breakpoint(860 down) {
+      margin-bottom: 34px;
+    }
+    .bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      @include breakpoint(860 down) {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+    .agree {
+      width: 40%;
+      @include breakpoint(860 down) {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 49px;
+      }
+    }
+    input {
+      color: #565656;
+      font-size: 18px;
+      font-weight: 600;
+      &::-moz-placeholder {
+        color: $nobel;
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 1;
+      }
+      &::-webkit-input-placeholder {
+        color: $nobel;
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: $nobel;
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 1;
+      }
+      &::-ms-input-placeholder {
+        color: $nobel;
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 1;
+      }
+      &::placeholder {
+        color: $nobel;
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 1;
+      }
+    }
+  }
+
+  &_button {
+    @include button;
+    width: 260px;
+    height: 50px;
+    border-radius: 25px;
+    @include breakpoint(860 down) {
+      width: 280px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

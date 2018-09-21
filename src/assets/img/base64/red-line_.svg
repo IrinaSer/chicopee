@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1580" height="127">
+    <defs>
+        <path id="a"
+              d="M-68 3797h1226s124.17-.44 208-27 126-56 126-56v26s-50.28 32-122.5 51.5-137.21 27.5-209.5 27.5H-68z"/>
+        <mask id="c" width="2" height="2" x="-1" y="-1">
+            <path fill="#fff" d="M-68 3714h1560v105H-68z"/>
+            <use xlink:href="#a"/>
+        </mask>
+        <filter id="b" width="1616.9" height="164" x="-91" y="3691" filterUnits="userSpaceOnUse">
+            <feOffset dx="10.9" dy="13" in="SourceGraphic" result="FeOffset1073Out"/>
+            <feGaussianBlur in="FeOffset1073Out" result="FeGaussianBlur1074Out" stdDeviation="5.2 5.2"/>
+        </filter>
+    </defs>
+    <g transform="translate(68 -3714)">
+        <g filter="url(#b)">
+            <use fill="none" stroke-opacity=".06" stroke-width="0" mask="url(&quot;#c&quot;)" xlink:href="#a"/>
+            <use fill-opacity=".06" xlink:href="#a"/>
+        </g>
+        <use xlink:href="#a"/>
+    </g>
+</svg>

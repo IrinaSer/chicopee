@@ -1,0 +1,40 @@
+block free-test
+  .free-test
+    .inner
+      .free-test_left
+        .title Бесплатный тест
+        .bottom-txt
+          .txt
+            p Хотите испытать наш продукт первым?
+            p.write-us напишите нам!
+      .free-test_right
+        form(data-abide novalidate)
+          label.half
+            input(type='text' required placeholder="Ваше имя ")
+          label.half
+            input(type='email' required placeholder="Email ")
+          label.half
+            input(type='tel' required placeholder="Телефон ")
+          label.half
+            input.city(type='text' required placeholder="Ваш город")
+          label.half
+            select(required)
+              option(value="") Выберите тип организации
+              -var option = ['Клининговая компания','Ресторан/бар/клуб/спортклуб/финтесцентр/стадион','Гостиница/отель','Кинотеатр/музей/театр','Производство','Оптовик','Офис/бизнес-центр/офисный центр/административное здание','Частное лицо']
+                -for(var i=0; i < option.length; i++)
+                  option(value=i )= option[i]
+          label.half
+            select(required)
+              option(value="") Выберите количество сотрудников
+              -for(var i=0; i < 4; i++)
+                option(value=i )= i
+          label.full
+            select(required)
+              option(value="") Выберите материал, который вы сейчас используете
+              -for(var i=0; i < 6; i++)
+                option(value=i )= i
+          .bottom
+            .agree Нажимая кнопку “Отправить”, я соглашаюсь с
+              a(href='/privacy.html') условиями хранения
+              | моих данных
+            a(href='#').free-test_button.red Заказать
